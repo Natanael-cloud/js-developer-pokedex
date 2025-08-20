@@ -163,3 +163,20 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
+/* Novo estilo para as estatísticas com fundo branco */
+.additional-info .stats {
+    background-color: #fff; /* Fundo branco */
+    color: #000; /* Cor do texto preta */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.additional-info .stats ul {
+    padding-left: 1rem;
+}
+
+.additional-info .stats li {
+    margin-bottom: 0.5rem;
+}

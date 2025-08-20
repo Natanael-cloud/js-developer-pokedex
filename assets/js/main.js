@@ -16,8 +16,24 @@ function convertPokemonToLi(pokemon) {
                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                 </ol>
 
-                <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
+                <img src="${pokemon.photo}" alt="${pokemon.name}">
+            </div>
+
+            <!-- Exibindo as novas informações -->
+            <div class="additional-info">
+                <p><strong>Habilidades:</strong> ${pokemon.abilities.join(', ')}</p>
+                <p><strong>Altura:</strong> ${pokemon.height / 10} m</p>
+                <p><strong>Peso:</strong> ${pokemon.weight / 10} kg</p>
+                
+                <!-- Seção de Estatísticas com fundo branco -->
+                <div class="stats">
+                    <p><strong>Estatísticas:</strong></p>
+                    <ul>
+                        ${pokemon.stats.map(stat => `
+                            <li>${stat.name}: ${stat.base_stat}</li>
+                        `).join('')}
+                    </ul>
+                </div>
             </div>
         </li>
     `
